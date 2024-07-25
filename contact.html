@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylecontact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <title>Partha's Portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo">
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="hamburger">
+                <i class="fa-solid fa-bars" id="ham"></i>
+                <i class="fa-solid fa-xmark" id="cross" ></i>
+            </div>
+            <div class="contactform">
+                <h1>Contact Me For General Enquiries</h1>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="09566848-6fda-41af-9c52-c55be7d5078a">
+                    
+                    <div class="mb-3">
+                        <label for="clientname" class="form-label">Name:</label>
+                        <input type="text" name="name" class="form-control" id="clientname" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientemail" class="form-label">Email address:</label>
+                        <input type="email" name="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientphone" class="form-label">Phone:</label>
+                        <input type="text" name="phone" class="form-control" id="clientphone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="clienteenquiry" class="form-label">Enquiry:</label>
+                        <textarea name="enquiry" class="form-control" id="clienteenquiry" aria-describedby="enquiryHelp"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-sm">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

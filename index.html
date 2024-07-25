@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Partha's Portfolio</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar sidebarGo">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="hamburger">
+          <i class="fa-solid fa-bars" id="ham"></i>
+          <i class="fa-solid fa-xmark" id="cross"></i>
+        </div>
+        <div class="infoContainer">
+          <div class="devInfo">
+            <div class="hello">Hi I am</div>
+            <div class="name">Partha Sarathi Rautaray</div>
+
+            <div class="about"></div>
+
+            <div class="moreabout">#The Infinity</div>
+
+            <div class="social">
+              <div class="socialmedialink">
+                <div class="icon">
+                  <a href="https://www.facebook.com/parthasarathi.rautaray.9"target="_blank"
+                    ><i class="fa-brands fa-facebook" id="stiker"></i
+                  ></a>
+                </div>
+                <span>FaceBook</span>
+              </div>
+
+              <div class="socialmedialink">
+                <div class="icon">
+                  <i class="fa-brands fa-youtube" id="stiker"></i>
+                </div>
+                <span>Youtube</span>
+              </div>
+
+              <div class="socialmedialink">
+                <div class="icon">
+                  <i class="fa-brands fa-twitter" id="stiker"></i>
+                </div>
+                <span>Twitter</span>
+              </div>
+
+              <div class="socialmedialink">
+                <div class="icon">
+                  <a
+                    href="https://github.com/ParthaSarathiRautaray1/ParthaSarathiRautaray1"
+                    target="_blank"
+                    ><i class="fa-brands fa-github" id="stiker"></i
+                  ></a>
+                </div>
+                <span>Github</span>
+              </div>
+            </div>
+
+            <div class="notflickingbutton">
+              <div class="buttons">
+                <a href="/cv.pdf" target="_blank">
+                  <button class="btn">Download CV</button></a
+                >
+                <a
+                  href="https://github.com/ParthaSarathiRautaray1/ParthaSarathiRautaray1"
+                  target="_blank"
+                >
+                  <button class="btn">Visit Github</button></a
+                >
+
+                <a href="/contact.html">
+                  <button class="btn">Contact Me</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="devPic"><img src="bg.png" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- value for typed js animation-->
+  <script>
+    var typed = new Typed(".about", {
+      strings: [
+        "Web Developer",
+        "Android Developer",
+        "Graphic Designer",
+        "Video Editor",
+        "FullStack Developer",
+      ],
+      typeSpeed: 50,
+    });
+  </script>
+</html>

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&disply=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.container1{
+    height: 110vh;
+    background-color: #191a2b;
+  
+}
+
+.sidebar {
+    position: absolute;
+    font-family: 'Poppins';
+    font-weight: 500;
+    height: 107vh;
+    transition: transform 0.3s ease-in;
+}
+
+.sidebar{
+    transform: translate();
+    
+}
+.sidebarGo{
+    transform: translateX(-100%);
+    
+}
+
+.hamburger{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.hamburger i{
+    font-size: 30px;
+    cursor: pointer;
+} 
+.hamburger i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+#cross{
+    margin-left: 120px;
+}
+
+.container1 {
+    display: flex;
+    height: 220vh;
+
+}
+
+.sidebar nav {
+    padding: 10px;
+    background-color: #454545;
+    height: 100%;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 30px;
+    padding: 33px 0;
+
+}
+
+.sidebar nav li a{
+    text-decoration: none;
+    color: rgb(0, 255, 251);
+}
+.main {
+    background-color:#191a2b;
+    width: 87vw;
+    height: 110vh;
+}
+/* aboutme page*/
+.intro{
+    margin-left: 100px;
+}
+
+.intro h1{
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    margin: 16px;
+    color: #fff;
+
+}
+.intro h1:hover{
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    margin: 16px;
+    color: #ffa200;  
+    cursor: pointer;
+}
+#namedesign{
+    font-weight: 500;
+    font-size: large;
+    color: #ff8c00;
+}
+
+.paradisign p{
+
+        padding-right: 0px;
+        font-family: 'Poppins', monospace;
+        color: rgb(255, 255, 255);
+        
+}
+u{
+    font-size: medium;
+}
+u:hover{
+    color: rgb(0, 255, 183);
+    cursor: pointer;
+
+}
+
+.intro h2{
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    color: whitesmoke;
+}
+
+.intro h2:hover{
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffa200;
+}
+
+.imageadjust{
+    width: 40px;
+}
+
+
+.skillItem{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-family:  'Poppins' , monospace;
+    font-weight: 500;
+    
+}
+
+.skill{
+    width: 100vw;
+    height: 7px;
+    background-color: blueviolet;
+    border: 2px solid black;
+    margin-top: 1px;
+}
+
+.hundred{
+    width: 100vw;
+
+}
+.ninty{
+    width: 70vw;
+
+}
+
+.fifty{
+    width: 30vw;
+}
+
+.sisty{
+    width:60vw;
+}
+.fourty{
+    width: 40vw;
+}
+
+
+
+@media (max-width: 425px) {
+
+    .container1{
+        height: 250vh;
+    }
+
+
+    .intro h1, .intro h2 {
+        font-size: 24px;
+    }
+
+    .skillItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .imageadjust {
+        width: 30px;
+    }
+
+    .hundred {
+        width: 90%;
+    }
+
+    .ninty {
+        width: 80%;
+    }
+
+    .sisty {
+        width: 70%;
+    }
+
+    .fifty {
+        width: 60%;
+    }
+
+    .fourty {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .intro {
+        margin-left: 15px;
+        
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+.paradisign p{
+    font-size: smaller;
+}
+}

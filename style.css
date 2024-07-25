@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&disply=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 110vh;
+    background-color: #191a2b; 
+}
+.sidebar {
+    position: absolute;
+    font-family: 'Poppins';
+    font-weight: 500;
+    height: 107vh;
+    transition: transform 0.3s ease-in;
+}
+.sidebar nav {
+    padding: 10px;
+    background-color: #454545;
+    height: 100%;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 30px;
+    padding: 33px 0;
+
+}
+
+.sidebar nav li a{
+    text-decoration: none;
+    color: rgb(0, 255, 251);
+}
+.main {
+    background-color:#191a2b;
+    width: 87vw;
+    height: 110vh;
+}
+
+.container {
+    display: flex;
+}
+
+.infoContainer {
+   /* background-color: palevioletred;*/
+    height: 60vh;
+    width: 75vw;
+    margin: 130px 100px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.devInfo {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+.hello {
+    font-size: 3em;
+    font-family: 'Poppins' , monospace;
+    color: #fff;
+}
+
+
+.name {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    color:#FF8C00;
+   
+
+}
+
+
+.about {
+
+    font-size: 2.5em;
+    color: #1eabdf;
+
+    
+}
+.moreabout{
+    font-size: 1em;
+    color: #00ff37;
+    font-family: 'Fira Sans', sans-serif;
+    margin-top: 25px;
+}
+
+.social {
+    display:flex;
+    justify-content: space-around;
+    
+}
+#stiker {
+    padding-left: 20px;
+}
+
+.icon i {
+    margin-top: 20px;
+    font-size:xx-large;
+    font-weight: bolder;
+    
+
+}
+.buttons{
+    margin-top: 2.2em;
+
+}
+
+.btn {
+    padding:10px 15px;
+    border-radius: 35px;
+    background-color: rgb(80, 119, 238);
+    color: rgb(243, 243, 243);
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 9px;
+    cursor: pointer;
+}
+.btn-sm{
+    font-size: 17px;
+    padding: 10px 19px;
+    margin: 12px 0;
+}
+
+.btn:hover{
+    background-color: white;
+    color: blue;
+}
+
+.devPic img {
+    height: 60vh;
+
+}
+
+.notflickingbutton{
+    display: block;
+}
+
+
+.sidebar{
+    transform: translate();
+    
+}
+.sidebarGo{
+    transform: translateX(-100%);
+    
+}
+
+.hamburger{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.hamburger i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+.hamburger i{
+    font-size: 30px;
+    cursor: pointer;
+} 
+
+#cross{
+    margin-left: 120px;
+}
+
+
+@media screen and (max-width: 1116px) {
+    .name{
+        font-size: 2em;
+    }
+    .hello{
+        font-size: 1em;
+    }
+    .about{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btn {
+        font-size: 10px;
+        padding: 6px 6px;
+        margin: 0 3px;
+    }
+}
+
+
+
+@media  screen and (max-width:880px) {
+    .devPic img{
+        width: 30vw;
+        height: 30vw;
+        margin-top: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .name{
+        font-size: 1.5em;
+    }
+    .hello{
+        font-size: 1em;
+    }
+    .about{
+        font-size: 1em;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin: 0 4px;
+        size: 20px;
+    }
+
+    @media  screen and (max-width:426px) {
+       
+        .infoContainer{
+        margin-left: 65px;
+        flex-direction: column-reverse;
+        align-items: center;
+        }
+        
+        .devPic img{
+            width: 40vw;
+            height: 30vh;
+            
+        }
+        .devInfo .hello{
+            margin-top: 5px;
+
+        }
+
+        .social {
+            display:flex;
+            justify-content: space-around;
+            
+        }
+        #stiker {
+            padding-left: 20px;
+            font-size: smaller;
+        }
+        .socialmedialink span{
+            font-size: smaller;
+            color: aliceblue;
+        }
+        
+    }
+
+
+}
+@media screen and (max-width: 400px) {
+    .btn {
+        font-size: 8px;
+        padding: 6px 6px;
+        margin: 0 5px;
+    }
+
+    
+}
+
+@media screen and (max-width:320px) {
+    .container{
+        background-color: #141a2b;
+    }
+ 
+    .name{
+        font-size: 1em;
+    }
+    .hello{
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (max-width: 321px) {
+    .btn {
+        font-size: 12px;
+        padding: 5px 12px;
+        margin:  3px;
+    }
+    .social {
+        display:flex;
+        justify-content: space-around;
+        
+    }
+    #stiker {
+        padding-left: 20px;
+        font-size: smaller;
+    }
+    .socialmedialink span{
+        font-size:xx-small;
+        color: aliceblue;
+    }
+
+
+}
+
+@media screen and (max-width: 376px){
+    .infoContainer{
+        margin-left: 15px;
+    }
+    .devPic{
+        display: flex;
+        justify-content:left;
+    }
+    .social {
+        display:flex;
+        justify-content: space-around;
+        
+    }
+    #stiker {
+        padding-left: 20px;
+        font-size: smaller;
+    }
+    .socialmedialink span{
+        font-size: smaller;
+        color: aliceblue;
+    }
+    
+
+}
+
