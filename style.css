@@ -1182,3 +1182,14 @@ body {
         letter-spacing: 8px;
     }
 }
+/* Add these properties to elements that are being animated */
+.card, .project-card, .info-card {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize animations by using transform instead of all */
+.card, .project-card, .info-card {
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
