@@ -2,688 +2,818 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#6500FF" />
+    <title>Partha Sarathi Rautaray — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Partha Sarathi Rautaray — Full Stack (MERN) Developer, Android Developer, Cloud & DevOps enthusiast and Video Editor from Odisha, India."
+    />
+    <meta name="author" content="Partha Sarathi Rautaray" />
+    <meta
+      name="keywords"
+      content="Partha Sarathi Rautaray, Full Stack Developer, MERN, React, Node.js, MongoDB, AWS, Docker, Android, Java, Python, Odisha, India"
+    />
+    <meta property="og:title" content="Partha Sarathi Rautaray" />
+    <meta
+      property="og:description"
+      content="Full Stack Developer • MERN • Cloud & DevOps • Android • Video Editor"
+    />
+    <meta property="og:image" content="me.jpeg" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Neucha&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <title>Partha's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <noscript>
+      <!-- Scroll-reveal starts hidden; without JS nothing would ever show it. -->
+      <style>
+        .reveal,
+        .skill-card {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t)
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
   </head>
+
   <body>
-    <div class="container">
-      <div class="main">
-        <section id="home">
-          <div class="infoContainer">
-            <div class="devInfo">
-              <div class="hello">Hi I am</div>
-              <div class="name">Partha Sarathi Rautaray</div>
-              <div class="about"></div>
-              <div class="moreabout">#The Infinity</div>
+    <!-- ================= HEADER / NAV ================= -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#home" class="brand">
+          <span class="brand-mark">PS</span>
+          <span class="brand-name">Partha<span class="dot">.</span></span>
+        </a>
 
-              <div class="social">
-                <div class="socialmedialink">
-                  <div class="icon">
-                    <a
-                      href="https://www.facebook.com/parthasarathi.rautaray.9"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-facebook" id="stiker"></i>
-                    </a>
-                  </div>
-                  <span>Facebook</span>
-                </div>
-                <div class="socialmedialink">
-                  <div class="icon">
-                    <a
-                      href="https://www.youtube.com/@theinfinity810"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-youtube" id="stiker"></i>
-                    </a>
-                  </div>
-                  <span>Youtube</span>
-                </div>
-                <div class="socialmedialink">
-                  <div class="icon">
-                    <i class="fa-brands fa-twitter" id="stiker"></i>
-                  </div>
-                  <span>Twitter</span>
-                </div>
-                <div class="socialmedialink">
-                  <div class="icon">
-                    <a
-                      href="https://github.com/ParthaSarathiRautaray1"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-github" id="stiker"></i>
-                    </a>
-                  </div>
-                  <span>Github</span>
-                </div>
-              </div>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#journey" class="nav-link">Journey</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#creator" class="nav-link">Creator</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
 
-              <div class="buttons">
-                <a href="/Partha-resume p.pdf" target="_blank">
-                  <button class="btn">Download CV</button>
-                </a>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle colour theme"
+            title="Toggle theme"
+          >
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </button>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-mobile" id="mobileNav" aria-label="Mobile">
+        <a href="#home" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i>About</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-bolt"></i>Skills</a>
+        <a href="#journey" class="nav-link"><i class="fa-solid fa-route"></i>Journey</a>
+        <a href="#services" class="nav-link"><i class="fa-solid fa-gear"></i>Services</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-code"></i>Projects</a>
+        <a href="#creator" class="nav-link"><i class="fa-solid fa-clapperboard"></i>Creator</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i>Contact</a>
+      </nav>
+    </header>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-a"></span>
+          <span class="blob blob-b"></span>
+          <span class="grid-overlay"></span>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-text reveal">
+            <span class="eyebrow"><span class="pulse-dot"></span>Available for work</span>
+            <h1 class="hero-title">
+              Hi, I'm <span class="text-brand">Partha</span>
+            </h1>
+            <h2 class="hero-role font-display">
+              I'm a <span class="typed" id="typed"></span><span class="caret">|</span>
+            </h2>
+            <p class="hero-desc font-display">
+              Hey! I am <strong>Partha Sarathi Rautaray</strong> — a Full Stack
+              (MERN) Developer, Android Developer, Cloud &amp; DevOps enthusiast,
+              Video Editor and Gamer living in <strong>Odisha, India</strong>. I
+              build fast, accessible products end to end — from pixel-perfect
+              interfaces to containerised APIs running on AWS.
+            </p>
+
+            <div class="hero-stats">
+              <div class="stat"><b data-count="4">0</b><span>+ Years Coding</span></div>
+              <div class="stat"><b data-count="25">0</b><span>+ Projects Built</span></div>
+              <div class="stat"><b data-count="20">0</b><span>+ Technologies</span></div>
+            </div>
+
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">
+                Contact Me <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="Partha-resume p.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fa-solid fa-download"></i> Download CV
+              </a>
+              <div class="socials">
                 <a
                   href="https://github.com/ParthaSarathiRautaray1"
                   target="_blank"
-                >
-                  <button class="btn">Visit Github</button>
-                </a>
-                <a href="#contact">
-                  <button class="btn">Contact Me</button>
-                </a>
-              </div>
-            </div>
-            <div class="devPic">
-              <img src="bg.png" alt="Profile Picture" />
-            </div>
-          </div>
-        </section>
-
-        <!--  about section -->
-        <section id="about" class="about-section">
-          <div class="about-container">
-            <h1 class="section-title">About Me</h1>
-            <div class="about-content">
-              <div class="about-text">
-                <p class="highlight-text">HI! I am Partha Sarathi Rautaray</p>
-                <p class="about-description">
-                  A passionate full-stack developer and tech enthusiast with a
-                  drive for creating innovative digital solutions. My journey in
-                  technology has been marked by continuous learning and hands-on
-                  experience across multiple domains. Starting with front-end
-                  development fundamentals, I've mastered HTML, CSS, and
-                  JavaScript, creating responsive and intuitive user interfaces.
-                  My expertise has grown to encompass the entire development
-                  stack, from designing user-centric interfaces to implementing
-                  robust backend solutions. As a cloud technology enthusiast,
-                  I've worked extensively with AWS services and Docker
-                  containerization, building scalable and efficient
-                  applications. My experience with the MERN stack allows me to
-                  develop full-featured web applications, while my knowledge of
-                  Java and Python enables me to tackle diverse programming
-                  challenges. Beyond coding, I'm deeply interested in DevOps
-                  practices, implementing CI/CD pipelines, and exploring
-                  emerging technologies like blockchain and AI. I believe in
-                  writing clean, maintainable code and following best practices
-                  in software development. When I'm not coding, you'll find me
-                  creating content, exploring new technologies, or contributing
-                  to open-source projects. I'm always excited to take on new
-                  challenges and collaborate on innovative projects that push
-                  the boundaries of what's possible in tech.
-                </p>
-              </div>
-
-              <div class="skills-container">
-                <h2 class="skills-title">My Skills</h2>
-                <div class="skill-items">
-                  <!-- Frontend Skills -->
-                  <div class="skill-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-item">
-                      <img src="htmllogo.png" alt="HTML" />
-                      <div class="skill-info">
-                        <h4>HTML5/CSS3</h4>
-                        <p>
-                          Expert in creating responsive, semantic markup and
-                          modern CSS layouts with animations
-                        </p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 95%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img src="js.png" alt="JavaScript" />
-                      <div class="skill-info">
-                        <h4>JavaScript</h4>
-                        <p>
-                          Strong command over ES6+, DOM manipulation, and modern
-                          JavaScript frameworks
-                        </p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 90%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Backend Skills -->
-                  <div class="skill-category">
-                    <h3>Backend & DevOps</h3>
-                    <div class="skill-item">
-                      <img
-                        src="https://miro.medium.com/v2/resize:fit:678/0*kxPYwfJmkXZ3iCWy.png"
-                        alt="MERN"
-                      />
-                      <div class="skill-info">
-                        <h4>MERN Stack</h4>
-                        <p>
-                          Full-stack development using MongoDB, Express.js,
-                          React, and Node.js
-                        </p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 85%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img
-                        src="https://w7.pngwing.com/pngs/219/411/png-transparent-docker-logo-kubernetes-microservices-cloud-computing-dockers-logo-text-logo-cloud-computing-thumbnail.png"
-                        alt="Docker"
-                      />
-                      <div class="skill-info">
-                        <h4>Docker</h4>
-                        <p>
-                          Container orchestration and microservices architecture
-                        </p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 80%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img
-                        src="https://icon2.cleanpng.com/20190418/vhc/kisspng-amazon-web-services-logo-cloud-computing-amazon-co-logoaws-1-itnext-summit-1713897597915.webp"
-                        alt="AWS"
-                      />
-                      <div class="skill-info">
-                        <h4>AWS</h4>
-                        <p>Cloud infrastructure management and deployment</p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 75%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Programming Languages -->
-                  <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-item">
-                      <img src="java.png" alt="Java" />
-                      <div class="skill-info">
-                        <h4>Java</h4>
-                        <p>
-                          Object-oriented programming and Android development
-                        </p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 88%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBxFEdu1cI0AVwFZ_lw0YiFM9Dr8WNUEhBQ&s"
-                        alt="Python"
-                      />
-                      <div class="skill-info">
-                        <h4>Python</h4>
-                        <p>Data processing and backend development</p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 82%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAp7qsjXPsV3Ug1CYFg4I5GFdsCqR5kQsO6g&s"
-                        alt="C++"
-                      />
-                      <div class="skill-info">
-                        <h4>C++</h4>
-                        <p>System programming and algorithm implementation</p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 85%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Tools & Technologies -->
-                  <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-item">
-                      <img
-                        src="https://w7.pngwing.com/pngs/540/594/png-transparent-redis-distributed-cache-go-database-caching-github-data-structure-redis-cache-thumbnail.png"
-                        alt="Redis"
-                      />
-                      <div class="skill-info">
-                        <h4>Redis</h4>
-                        <p>In-memory data structure store and caching</p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 78%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img src="davinci.png" alt="DaVinci" />
-                      <div class="skill-info">
-                        <h4>DaVinci Resolve</h4>
-                        <p>Professional video editing and color grading</p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 75%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item">
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRG5QwH7w2srFvBZatJy5Nft6M_2pYAmO6bA&s"
-                        alt="Canva"
-                      />
-                      <div class="skill-info">
-                        <h4>Canva</h4>
-                        <p>Graphic design and social media content creation</p>
-                        <div class="skill-bar">
-                          <div
-                            class="skill-progress"
-                            style="--progress: 92%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  rel="noopener"
+                  class="social social-gh"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/@theinfinity810"
+                  target="_blank"
+                  rel="noopener"
+                  class="social social-yt"
+                  aria-label="YouTube"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/parthasarathi.rautaray.9"
+                  target="_blank"
+                  rel="noopener"
+                  class="social social-fb"
+                  aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  href="mailto:parthasarathirautaray176@gmail.com"
+                  class="social social-mail"
+                  aria-label="Email"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
               </div>
             </div>
           </div>
-        </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services-section">
-          <div class="service-wrapper">
-            <div class="service">
-              <h1 class="section-title">My Services</h1>
-              <div class="cardsofservice">
-                <div class="card">
-                  <i class="fa-solid fa-code"></i>
-                  <h2>FullStack Developer</h2>
-                  <p>
-                    I'm a full-stack developer proficient in both frontend and
-                    backend technologies. I work with HTML, CSS, JavaScript,
-                    React, Node.js, Angular, PHP and databases, building
-                    comprehensive and robust web applications.
-                  </p>
-                </div>
-
-                <div class="card">
-                  <i class="fa-brands fa-android"></i>
-                  <h2>Android Developer</h2>
-                  <p>
-                    As an Android developer, I design, build, and maintain
-                    applications for the Android platform by using Java and
-                    Kotlin to create user-friendly Apps that run seamlessly on
-                    various devices.
-                  </p>
-                </div>
-
-                <div class="card">
-                  <i class="fa-brands fa-steam"></i>
-                  <h2>Gaming</h2>
-                  <p>
-                    I'm a gamer who loves playing PUBG and CODM. I enjoy the
-                    thrill of battle royale and first-person shooter games,
-                    constantly improving my skills and strategizing to win
-                    matches.
-                  </p>
-                </div>
-
-                <div class="card">
-                  <i class="fa-solid fa-video-slash"></i>
-                  <h2>Video Editor</h2>
-                  <p>
-                    I'm using DaVinci Resolve and Adobe Premiere Pro for
-                    animations and creating cinematic, Motion Graphic and visual
-                    content.
-                  </p>
-                </div>
-
-                <div class="card">
-                  <i class="fa-solid fa-photo-film"></i>
-                  <h2>PhotoShop And AfterEffect</h2>
-                  <p>
-                    I'm using PhotoShop for image editing and graphic design.
-                    Also using AfterEffect for Adding Visual Effects
-                  </p>
-                </div>
-
-                <div class="card">
-                  <i class="fa-solid fa-address-card"></i>
-                  <h2>Other Services</h2>
-                  <p>Go To Contact Me Page</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- project section -->
-        <section id="projects" class="projects-section">
-          <div class="project-wrapper">
-            <div class="project-container">
-              <h1 class="section-title">My Projects</h1>
-              <div class="project-cards">
-                <div class="project-card">
-                  <div class="project-image">
-                    <img src="insta.jpg" alt="Instagram Clone" />
-                  </div>
-                  <div class="project-content">
-                    <h2>Instagram Clone</h2>
-                    <div class="tech-stack">
-                      <span>React</span>
-                      <span>Node.js</span>
-                      <span>MongoDB</span>
-                      <span>Socket.io</span>
-                      <span>Redux</span>
-                    </div>
-                    <p>
-                      Full-featured Instagram clone with real-time chat,
-                      notifications, and media sharing
-                    </p>
-                    <ul class="features">
-                      <li>Real-time messaging using Socket.io</li>
-                      <li>Photo/video upload with filters</li>
-                      <li>Like, comment, and share functionality</li>
-                      <li>Follow/unfollow system</li>
-                      <li>Feed algorithms and notifications</li>
-                    </ul>
-                    <div class="project-links">
-                      <a
-                        href="https://instaclone-jg5h.onrender.com/"
-                        target="_blank"
-                        class="project-link"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/ParthaSarathiRautaray1/INSTACLONE"
-                        target="_blank"
-                        class="project-link"
-                        >Source Code</a
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card">
-                  <div class="project-image">
-                    <img src="youtube.jpg" alt="YouTube Clone" />
-                  </div>
-                  <div class="project-content">
-                    <h2>YouTube Clone</h2>
-                    <div class="tech-stack">
-                      <span>React</span>
-                      <span>Redux Toolkit</span>
-                      <span>YouTube API</span>
-                      <span>Tailwind CSS</span>
-                    </div>
-                    <p>
-                      Modern YouTube clone with advanced features and optimized
-                      performance
-                    </p>
-                    <ul class="features">
-                      <li>Debounced search with caching</li>
-                      <li>Infinite scroll implementation</li>
-                      <li>Live chat simulation</li>
-                      <li>Video categorization</li>
-                      <li>Nested comments system</li>
-                    </ul>
-                    <div class="project-links">
-                      <a
-                        href="https://instagram-clone.demo.com"
-                        target="_blank"
-                        class="project-link"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/ParthaSarathiRautaray1/my-youTube"
-                        target="_blank"
-                        class="project-link"
-                        >Source Code</a
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card">
-                  <div class="project-image">
-                    <img src="tweeter.jpg" alt="Twitter Clone" />
-                  </div>
-                  <div class="project-content">
-                    <h2>Twitter Clone</h2>
-                    <div class="tech-stack">
-                      <span>React</span>
-                      <span>Node.js</span>
-                      <span>Express</span>
-                      <span>MongoDB</span>
-                    </div>
-                    <p>Feature-rich Twitter clone built with MERN stack</p>
-                    <ul class="features">
-                      <li>Tweet CRUD operations</li>
-                      <li>Real-time updates</li>
-                      <li>User authentication</li>
-                      <li>Responsive design</li>
-                      <li>Media sharing capabilities</li>
-                    </ul>
-                    <div class="project-links">
-                      <a
-                        href="https://twitter-clone.demo.com"
-                        target="_blank"
-                        class="project-link"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/ParthaSarathiRautaray1/TwitterClone_MERN-"
-                        target="_blank"
-                        class="project-link"
-                        >Source Code</a
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card">
-                  <div class="project-image">
-                    <img src="prodshow.jpg" alt="E-Commerce Platform" />
-                  </div>
-                  <div class="project-content">
-                    <h2>E-Commerce Platform</h2>
-                    <div class="tech-stack">
-                      <span>MERN Stack</span>
-                      <span>Stripe</span>
-                      <span>Redux</span>
-                      <span>JWT</span>
-                    </div>
-                    <p>
-                      Full-featured e-commerce platform with modern UI and
-                      secure payments
-                    </p>
-                    <ul class="features">
-                      <li>Product catalog with filters</li>
-                      <li>Shopping cart functionality</li>
-                      <li>Secure payment integration</li>
-                      <li>Order tracking system</li>
-                      <li>Admin dashboard</li>
-                    </ul>
-                    <div class="project-links">
-                      <a
-                        href="https://mern-productshow.onrender.com/"
-                        target="_blank"
-                        class="project-link"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/ParthaSarathiRautaray1/mern-productShow"
-                        target="_blank"
-                        class="project-link"
-                        >Source Code</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-          <div class="contact-wrapper">
-            <h1 class="section-title">Contact M
-              e</h1>
-            <div class="contact-container">
-              <div class="contact-info">
-                <div class="info-card">
-                  <i class="fa-solid fa-envelope"></i>
-                  <h3>Email</h3>
-                  <p>parthasarathirautaray176@gmail.com</p>
-                </div>
-                <div class="info-card">
-                  <i class="fa-solid fa-phone"></i>
-                  <h3>Phone</h3>
-                  <p>+91 9078859867</p>
-                </div>
-                <div class="info-card">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <h3>Location</h3>
-                  <p>Odisha , India</p>
-                </div>
-              </div>
-
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                class="contact-form"
-              >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="09566848-6fda-41af-9c52-c55be7d5078a"
+          <div class="hero-photo reveal" data-delay="150">
+            <div class="photo-ring">
+              <div class="photo-inner">
+                <img
+                  src="me.jpeg"
+                  alt="Partha Sarathi Rautaray"
+                  fetchpriority="high"
                 />
+              </div>
+            </div>
+            <span class="float-chip chip-1"><i class="fa-brands fa-react"></i> React</span>
+            <span class="float-chip chip-2"><i class="fa-brands fa-node-js"></i> Node</span>
+            <span class="float-chip chip-3"><i class="fa-brands fa-aws"></i> AWS</span>
+          </div>
+        </div>
 
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="Your Name"
-                  />
+        <a href="#about" class="scroll-hint" aria-label="Scroll to about">
+          <span class="mouse"><span></span></span>
+        </a>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="badge">👋 Get to know me</span>
+            <h2 class="section-title font-display">Who <span class="gradient-text">am I?</span></h2>
+            <span class="title-underline"></span>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>
+                I'm a passionate <strong>full-stack developer</strong> and tech
+                enthusiast with a drive for building innovative digital products.
+                My journey started with front-end fundamentals — HTML, CSS and
+                JavaScript — and grew into the full stack: designing
+                user-centric interfaces and shipping robust, well-tested backends
+                behind them.
+              </p>
+              <p>
+                As a cloud enthusiast I work extensively with <strong>AWS</strong>
+                and <strong>Docker</strong>, building scalable, containerised
+                applications and CI/CD pipelines. The <strong>MERN stack</strong>
+                is my home turf for full-featured web apps, while
+                <strong>Java</strong>, <strong>Python</strong> and
+                <strong>C++</strong> let me take on everything from Android apps
+                to algorithms and data work.
+              </p>
+
+              <div class="about-list">
+                <p class="about-list-title">A few things I care about:</p>
+                <ul>
+                  <li>Writing clean, maintainable code and following best practices.</li>
+                  <li>Shipping responsive, accessible UI that feels fast on every device.</li>
+                  <li>Automating the boring parts — CI/CD, Docker, infra as code.</li>
+                  <li>Exploring emerging tech: AI tooling, blockchain and DevOps.</li>
+                  <li>Creating content, editing video and contributing to open source.</li>
+                </ul>
+              </div>
+
+              <p>
+                When I'm not coding you'll find me editing video in DaVinci
+                Resolve, designing thumbnails, or grinding a round of PUBG. I'm
+                always excited to take on new challenges and collaborate on
+                projects that push what's possible.
+              </p>
+            </div>
+
+            <aside class="about-side">
+             <div class="about-sticky reveal" data-delay="120">
+              <div class="info-panel">
+                <h3 class="font-display">Quick facts</h3>
+                <ul class="fact-list">
+                  <li><span>Name</span><b>Partha Sarathi Rautaray</b></li>
+                  <li><span>Role</span><b>Full Stack Developer</b></li>
+                  <li><span>Location</span><b>Odisha, India</b></li>
+                  <li><span>Email</span><b>parthasarathirautaray176@gmail.com</b></li>
+                  <li><span>Phone</span><b>+91 90788 59867</b></li>
+                  <li><span>Freelance</span><b class="ok">Available</b></li>
+                </ul>
+                <a href="Partha-resume p.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-file-arrow-down"></i> Download Résumé
+                </a>
+              </div>
+
+              <div class="info-panel">
+                <h3 class="font-display">I work with</h3>
+                <div class="chip-cloud">
+                  <span>JavaScript</span><span>TypeScript</span><span>React</span>
+                  <span>Next.js</span><span>Redux</span><span>Node.js</span>
+                  <span>Express</span><span>PHP</span><span>Laravel</span>
+                  <span>MongoDB</span><span>MySQL</span><span>Redis</span>
+                  <span>Socket.io</span><span>Tailwind</span><span>AWS</span>
+                  <span>Docker</span><span>Git</span><span>Java</span>
+                  <span>Python</span><span>C++</span><span>Linux</span>
+                </div>
+              </div>
+             </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ================= -->
+      <section id="skills" class="section skills-section">
+        <div class="skew-band" aria-hidden="true"></div>
+
+        <div class="container skills-inner">
+          <div class="skills-grid">
+            <div class="skills-aside">
+              <div class="skills-sticky reveal" data-dir="left">
+                <h2 class="section-title font-display">
+                  Skills I <span class="gradient-text">Earned</span>
+                </h2>
+                <p class="skills-lead">
+                  I've spent years learning and mastering a wide variety of tools
+                  and technologies. Here is the tech stack I use to bring ideas
+                  to life.
+                </p>
+
+                <div class="orbit-card">
+                  <div class="orbit-glow"></div>
+                  <div class="orbit ring-outer">
+                    <div class="orbit ring-inner">
+                      <div class="orbit-core"></div>
+                    </div>
+                    <span class="orbit-sat sat-1"></span>
+                    <span class="orbit-sat sat-2"></span>
+                    <span class="orbit-sat sat-3"></span>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="Your Email"
-                  />
+                <div class="skills-legend">
+                  <span><i class="fa-solid fa-layer-group"></i> 6 categories</span>
+                  <span><i class="fa-solid fa-bolt"></i> 30+ tools</span>
                 </div>
+              </div>
+            </div>
 
-                <div class="form-group">
-                  <input type="text" name="phone" placeholder="Your Phone" />
-                </div>
+            <div class="skills-main">
+              <!-- Filter pills -->
+              <div class="skill-filters reveal" role="tablist" aria-label="Skill categories">
+                <button class="pill is-active" data-filter="all">All</button>
+                <button class="pill" data-filter="frontend">Frontend</button>
+                <button class="pill" data-filter="backend">Backend</button>
+                <button class="pill" data-filter="database">Database</button>
+                <button class="pill" data-filter="cloud">Cloud &amp; DevOps</button>
+                <button class="pill" data-filter="languages">Languages</button>
+                <button class="pill" data-filter="creative">Creative</button>
+              </div>
 
-                <div class="form-group">
-                  <textarea
-                    name="message"
-                    required
-                    placeholder="Your Message"
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-              </form>
+              <div class="skill-cards" id="skillCards">
+                <!-- Populated by script.js so hues/bars stay in sync -->
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <!-- ================= JOURNEY ================= -->
+      <section id="journey" class="section journey-section">
+        <div class="journey-bg" aria-hidden="true">
+          <span class="cone"></span>
+          <span class="halo"></span>
+          <span class="stars" id="stars"></span>
+        </div>
 
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="badge">🚀 Career Journey</span>
+            <h2 class="section-title font-display">My <span class="gradient-text">Dev Career Path</span></h2>
+            <p class="section-sub">
+              From static pages to containerised full-stack systems on the cloud —
+              here is my journey, phase by phase.
+            </p>
+            <span class="title-underline"></span>
+          </div>
+
+          <div class="phase-legend reveal">
+            <span class="phase-pill p1"><i class="dots"><i></i><i></i><i></i></i> Phase 1 · Foundations</span>
+            <span class="phase-pill p2"><i class="dots"><i></i><i></i><i></i></i> Phase 2 · Full Stack</span>
+            <span class="phase-pill p3"><i class="dots"><i></i><i></i><i></i></i> Phase 3 · Cloud &amp; Scale</span>
+          </div>
+
+          <ol class="timeline">
+            <li class="tl-item reveal">
+              <span class="tl-node" style="--node:#00c758"><i class="fa-solid fa-code"></i></span>
+              <div class="tl-card">
+                <div class="tl-head">
+                  <h3 class="font-display">Phase 1 — Frontend Foundations</h3>
+                  <span class="tl-tag">2021 → 2022</span>
+                </div>
+                <p>
+                  Learned the web from the ground up: semantic HTML5, modern CSS
+                  (Flexbox, Grid, animations), responsive design and vanilla
+                  JavaScript (ES6+, DOM, fetch). Built my first portfolio sites
+                  and landing pages.
+                </p>
+                <div class="tl-tags">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                  ><span>Responsive Design</span><span>Git</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="tl-item reveal">
+              <span class="tl-node" style="--node:#3080ff"><i class="fa-brands fa-react"></i></span>
+              <div class="tl-card">
+                <div class="tl-head">
+                  <h3 class="font-display">Phase 2 — MERN Full Stack</h3>
+                  <span class="tl-tag">2022 → 2023</span>
+                </div>
+                <p>
+                  Moved into component architecture with React and Redux Toolkit,
+                  then went full stack with Node.js, Express and MongoDB. Shipped
+                  real clones — Instagram, YouTube, Twitter — with authentication,
+                  real-time chat and media uploads.
+                </p>
+                <div class="tl-tags">
+                  <span>React</span><span>Redux Toolkit</span><span>Node.js</span
+                  ><span>Express</span><span>MongoDB</span><span>Socket.io</span
+                  ><span>JWT</span><span>REST APIs</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="tl-item reveal">
+              <span class="tl-node" style="--node:#fe6e00"><i class="fa-brands fa-aws"></i></span>
+              <div class="tl-card">
+                <div class="tl-head">
+                  <h3 class="font-display">Phase 3 — Cloud, DevOps &amp; Scale</h3>
+                  <span class="tl-tag">2023 → Now</span>
+                </div>
+                <p>
+                  Learned to ship properly: Docker containers, CI/CD pipelines,
+                  AWS (EC2, S3, IAM, Route 53), Redis caching and Nginx. Alongside
+                  that, Android development in Java/Kotlin and a growing interest
+                  in AI tooling and blockchain.
+                </p>
+                <div class="tl-tags">
+                  <span>Docker</span><span>AWS</span><span>CI/CD</span
+                  ><span>Redis</span><span>Nginx</span><span>Linux</span
+                  ><span>Android</span><span>AI Tooling</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES ================= -->
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="badge">🛠️ What I do</span>
+            <h2 class="section-title font-display">My <span class="gradient-text">Services</span></h2>
+            <span class="title-underline"></span>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <i class="fa-solid fa-code"></i>
+              <h3 class="font-display">Full Stack Development</h3>
+              <p>
+                End-to-end web applications with React, Node.js, Express and
+                MongoDB — REST APIs, authentication, real-time features and
+                dashboards.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-delay="80">
+              <i class="fa-brands fa-android"></i>
+              <h3 class="font-display">Android Development</h3>
+              <p>
+                Native Android apps in Java and Kotlin — clean Material UI,
+                offline storage and API integration that runs smoothly across
+                devices.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-delay="160">
+              <i class="fa-brands fa-docker"></i>
+              <h3 class="font-display">Cloud &amp; DevOps</h3>
+              <p>
+                Dockerised deployments, CI/CD pipelines and AWS infrastructure —
+                so your app ships reliably and scales without drama.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <i class="fa-solid fa-film"></i>
+              <h3 class="font-display">Video Editing</h3>
+              <p>
+                Cinematic edits, motion graphics and colour grading in DaVinci
+                Resolve and Adobe Premiere Pro for YouTube, reels and ads.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-delay="80">
+              <i class="fa-solid fa-photo-film"></i>
+              <h3 class="font-display">Design &amp; Graphics</h3>
+              <p>
+                Photoshop, After Effects and Canva for thumbnails, brand assets,
+                social content and visual effects that actually get clicks.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-delay="160">
+              <i class="fa-brands fa-steam"></i>
+              <h3 class="font-display">Gaming &amp; Content</h3>
+              <p>
+                PUBG and CODM player and content creator — gameplay editing,
+                channel branding and community building on YouTube.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section id="projects" class="section projects-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="badge">💼 Selected work</span>
+            <h2 class="section-title font-display">Major <span class="gradient-text">Projects</span></h2>
+            <span class="title-underline"></span>
+          </div>
+
+          <div class="project-list">
+            <article class="project-card reveal">
+              <div class="project-media">
+                <img src="insta.jpg" alt="Instagram Clone" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h3 class="font-display">Instagram Clone</h3>
+                <span class="rule"></span>
+                <p>
+                  A full-featured Instagram clone with real-time chat,
+                  notifications and media sharing — built on the MERN stack with
+                  Socket.io powering live updates.
+                </p>
+                <ul class="project-points">
+                  <li>Real-time messaging using Socket.io</li>
+                  <li>Photo / video upload with filters</li>
+                  <li>Like, comment and share functionality</li>
+                  <li>Follow / unfollow system with feed algorithm</li>
+                </ul>
+                <h4 class="stack-title">Tech Stack</h4>
+                <div class="stack">
+                  <span>React</span><span>Redux</span><span>Node.js</span
+                  ><span>Express</span><span>MongoDB</span><span>Socket.io</span
+                  ><span>Cloudinary</span><span>JWT</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://instaclone-jg5h.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                    Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/ParthaSarathiRautaray1/INSTACLONE" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <img src="youtube.jpg" alt="YouTube Clone" loading="lazy" data-fallback="js.png" />
+              </div>
+              <div class="project-body">
+                <h3 class="font-display">YouTube Clone</h3>
+                <span class="rule"></span>
+                <p>
+                  A modern YouTube clone focused on performance — debounced search
+                  with caching, infinite scroll and a live-chat simulation, all
+                  powered by the YouTube Data API.
+                </p>
+                <ul class="project-points">
+                  <li>Debounced search with in-memory cache</li>
+                  <li>Infinite scroll and video categorisation</li>
+                  <li>Live chat simulation</li>
+                  <li>Nested comments system</li>
+                </ul>
+                <h4 class="stack-title">Tech Stack</h4>
+                <div class="stack">
+                  <span>React</span><span>Redux Toolkit</span
+                  ><span>YouTube API</span><span>Tailwind CSS</span
+                  ><span>Custom Hooks</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ParthaSarathiRautaray1/my-youTube" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <img src="tweeter.jpg" alt="Twitter Clone" loading="lazy" data-fallback="node.png" />
+              </div>
+              <div class="project-body">
+                <h3 class="font-display">Twitter Clone</h3>
+                <span class="rule"></span>
+                <p>
+                  A feature-rich Twitter clone on the MERN stack with full tweet
+                  CRUD, authentication, media sharing and a responsive timeline
+                  that updates in real time.
+                </p>
+                <ul class="project-points">
+                  <li>Tweet create / read / update / delete</li>
+                  <li>JWT authentication and protected routes</li>
+                  <li>Real-time timeline updates</li>
+                  <li>Fully responsive design</li>
+                </ul>
+                <h4 class="stack-title">Tech Stack</h4>
+                <div class="stack">
+                  <span>React</span><span>Node.js</span><span>Express</span
+                  ><span>MongoDB</span><span>JWT</span><span>Tailwind CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ParthaSarathiRautaray1/TwitterClone_MERN-" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-media">
+                <img src="prodshow.jpg" alt="E-Commerce Platform" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h3 class="font-display">E-Commerce Platform</h3>
+                <span class="rule"></span>
+                <p>
+                  A full-featured commerce platform with a filterable catalogue,
+                  cart, secure payments and an admin dashboard for orders and
+                  inventory.
+                </p>
+                <ul class="project-points">
+                  <li>Product catalogue with search and filters</li>
+                  <li>Shopping cart and secure payment integration</li>
+                  <li>Order tracking system</li>
+                  <li>Admin dashboard with analytics</li>
+                </ul>
+                <h4 class="stack-title">Tech Stack</h4>
+                <div class="stack">
+                  <span>MERN Stack</span><span>Redux</span><span>Stripe</span
+                  ><span>JWT</span><span>Mongoose</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://mern-productshow.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                    Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/ParthaSarathiRautaray1/mern-productShow" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-more reveal">
+            <a href="https://github.com/ParthaSarathiRautaray1" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fa-brands fa-github"></i> See everything on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECOND PORTFOLIO CTA ================= -->
+      <section id="creator" class="section creator-section">
+        <div class="container">
+          <div class="creator-card reveal">
+            <div class="creator-glow" aria-hidden="true"></div>
+
+            <div class="creator-body">
+              <span class="badge">🎬 My other side</span>
+              <h2 class="section-title font-display">
+                Content Creation <span class="gradient-text">Portfolio</span>
+              </h2>
+              <p>
+                Beyond code I create — video editing, motion graphics, thumbnails
+                and brand content. I keep that work in a separate portfolio, with
+                the reels, edits and designs in full.
+              </p>
+
+              <div class="creator-tags">
+                <span><i class="fa-solid fa-clapperboard"></i> Video Editing</span>
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> Motion Graphics</span>
+                <span><i class="fa-solid fa-image"></i> Thumbnails</span>
+                <span><i class="fa-solid fa-palette"></i> Brand Design</span>
+              </div>
+
+              <a
+                href="https://freelance-frontend-04.onrender.com/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary btn-lg"
+              >
+                Visit Content-Creation Portfolio
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="creator-art" aria-hidden="true">
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="badge">📬 Say hello</span>
+            <h2 class="section-title font-display">Contact <span class="gradient-text">Me</span></h2>
+            <p class="section-sub">
+              Got a project, a role or just a question? Drop a message — I usually
+              reply within a day.
+            </p>
+            <span class="title-underline"></span>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <a class="info-card" href="mailto:parthasarathirautaray176@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p>parthasarathirautaray176@gmail.com</p>
+              </a>
+              <a class="info-card" href="tel:+919078859867">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+91 90788 59867</p>
+              </a>
+              <div class="info-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Location</h3>
+                <p>Odisha, India</p>
+              </div>
+            </div>
+
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="contact-form reveal"
+              data-delay="120"
+            >
+              <input type="hidden" name="access_key" value="09566848-6fda-41af-9c52-c55be7d5078a" />
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="cf-name">Your Name</label>
+                  <input id="cf-name" type="text" name="name" required placeholder="Jane Doe" />
+                </div>
+                <div class="field">
+                  <label for="cf-email">Your Email</label>
+                  <input id="cf-email" type="email" name="email" required placeholder="jane@example.com" />
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="cf-phone">Phone <span class="opt">(optional)</span></label>
+                  <input id="cf-phone" type="tel" name="phone" placeholder="+91 …" />
+                </div>
+                <div class="field">
+                  <label for="cf-subject">Subject</label>
+                  <input id="cf-subject" type="text" name="subject" placeholder="Project enquiry" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" required placeholder="Tell me about it…"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">PS</span>
+          <div>
+            <b class="font-display">Partha Sarathi Rautaray</b>
+            <p>Full Stack Developer · Odisha, India</p>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#home">Home</a><a href="#about">About</a
+          ><a href="#skills">Skills</a><a href="#journey">Journey</a
+          ><a href="#projects">Projects</a
+          ><a href="https://freelance-frontend-04.onrender.com/" target="_blank" rel="noopener">Content Portfolio</a
+          ><a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="https://github.com/ParthaSarathiRautaray1" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.youtube.com/@theinfinity810" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/parthasarathi.rautaray.9" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="mailto:parthasarathirautaray176@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
       </div>
 
-      <nav class="bottom-nav">
-        <a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a>
-        <a href="#about"><i class="fa-solid fa-user"></i><span>About</span></a>
-        <a href="#services"
-          ><i class="fa-solid fa-gear"></i><span>Services</span></a
-        >
-        <a href="#projects"
-          ><i class="fa-solid fa-code"></i><span>Projects</span></a
-        >
-        <a href="#contact"
-          ><i class="fa-solid fa-envelope"></i><span>Contact</span></a
-        >
-      </nav>
-    </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Partha Sarathi Rautaray. Built with ❤️ in India.</p>
+        <p class="tagline font-display">#The Infinity</p>
+      </div>
+    </footer>
+
+    <a href="#home" class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script src="script.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed(".about", {
-        strings: [
-          "Web Developer",
-          "Android Developer",
-          "Graphic Designer",
-          "Video Editor",
-        ],
-        typeSpeed: 50,
-      });
-    </script>
   </body>
-
-
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-wave">
-        <svg viewBox="0 0 1440 320">
-            <path fill="#00ff88" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,154.7C960,160,1056,128,1152,117.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-    </div>
-    
-    <div class="the-end">
-        <div class="end-text">
-            <span>T</span>
-            <span>H</span>
-            <span>E</span>
-            <span>&nbsp;</span>
-            <span>E</span>
-            <span>N</span>
-            <span>D</span>
-        </div>
-    </div>
-</footer>
-
-
 </html>
